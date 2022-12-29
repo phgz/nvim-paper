@@ -117,8 +117,8 @@ local highlights = {
   SpecialKey = { link = 'Number' },
   Statement = { link = 'Keyword' },
   StorageClass = { link = 'Keyword' },
-  Type = { link = 'Keyword' }, -- Type = { link = 'Constant' },
-  Visual = { link = 'Cursor' }, -- Visual = { bg = lgrey1 },
+  Type = { link = 'Keyword' },
+  Visual = { link = 'Cursor' },
   WildMenu = { link = 'PmenuSel' },
 
   EndOfBuffer = { fg = background, bg = background },
@@ -159,9 +159,9 @@ local highlights = {
 
   -- Diffs
   DiffAdd = { bg = lgreen },
-  DiffChange = {}, -- DiffChange = { bg = lgrey2 },
+  DiffChange = {},
   DiffDelete = { fg = red },
-  DiffText = { bg = lgreen }, --   DiffText = { bg = lyellow2 },
+  DiffText = { bg = lgreen },
   diffFile = { fg = black, bold = true },
   diffLine = { fg = blue },
   diffAdded = { link = 'DiffAdd' },
@@ -225,24 +225,15 @@ local highlights = {
   -- Lua
   luaFunction = { link = 'Keyword' },
 
-  -- Floating highlights are a bit too distracting, so they are disabled
-  DiagnosticFloatingError = { fg = black, bg = background },
-  DiagnosticFloatingHint = { fg = black, bg = background },
-  DiagnosticFloatingInfo = { fg = black, bg = background },
-  DiagnosticFloatingWarn = { fg = black, bg = background },
-
+  -- LSP
   DiagnosticError = { fg = red, bold = true },
+  DiagnosticWarn = { fg = yellow, bold = true },
   DiagnosticHint = { fg = grey, bold = true },
   DiagnosticInfo = { fg = blue, bold = true },
-  DiagnosticWarn = { fg = yellow, bold = true },
-  -- LSP
-  DiagnosticUnderlineError = { underline = true, sp = red },
-  DiagnosticUnderlineWarn = { underline = true, sp = yellow },
-  LspDiagnosticsUnderlineError = { link = 'DiagnosticUnderlineError' },
-  LspDiagnosticsUnderlineWarning = { link = 'DiagnosticUnderlineWarn' },
-  -- LSP
-  -- LspDiagnosticsUnderlineError NONE = { bg=undercurl, red= true}
-  -- LspDiagnosticsUnderlineWarning NONE = { bg=undercurl, yellow= true}
+  DiagnosticUnderlineError = { undercurl = true, sp = red },
+  DiagnosticUnderlineWarn = { undercurl = true, sp = yellow },
+  DiagnosticUnderlineHint = { undercurl = true, sp = grey },
+  DiagnosticUnderlineInfo = { undercurl = true, sp = blue },
 
   -- Make
   makeTarget = { link = 'Function' },
@@ -312,7 +303,6 @@ local highlights = {
   typescriptLogicSymbols = { link = 'Operator' },
 
   -- TOML
-  --
   -- tomlTSTypeBuiltin is used for section titles (e.g. `[dependencies]`), while
   -- tomlTSProperty is used for key-value pairs. These rules ensure the syntax
   -- is consistent with https://github.com/cespare/vim-toml.
