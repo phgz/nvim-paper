@@ -1,23 +1,15 @@
 # Nvim Paper
 
-A personal light theme for Neovim, based on the color of paper as found in
-various notebooks.
+Vim paper for Neovim! See original colorscheme made by [yorickpeterse](https://gitlab.com/yorickpeterse) in the Related projects section.
 
-I created Paper as a replacement for [Happy
-Hacking](https://gitlab.com/yorickpeterse/happy_hacking.vim), and the
-[Autumn](https://gitlab.com/yorickpeterse/Autumn.vim) theme it was originally
-based on. I've been using dark themes for the last decade or so, and mostly
-without issues. But dark themes are not necessarily a good choice for your eyes,
+(Neo)Vim Paper is based on the color of paper as found in various notebooks.
+
+Dark themes are not necessarily a good choice for your eyes,
 and research has shown that it's generally better to have dark text on a light
 background (see [this StackExchange question for some interesting
 data](https://ux.stackexchange.com/questions/53264/dark-or-white-color-theme-is-better-for-the-eyes)).
 In addition, [halation](https://en.wiktionary.org/wiki/halation) becomes a
 problem when presenting light text on (very) dark backgrounds.
-
-Besides the issues with dark themes, I also simply wanted a theme with fewer
-colors; making the colors that _are_ used stand out more. I couldn't squeeze
-this into the Happy Hacking theme without fundamentally changing it, so I
-created a new theme instead.
 
 Please note that this theme is designed with the following display properties in
 mind:
@@ -44,7 +36,7 @@ is designed with this setting in mind.
 
 ### Vim Plug
 
-    Plug 'https://gitlab.com/yorickpeterse/nvim-paper.git'
+    Plug 'https://github.com/nvim-paper.git'
 
 Then run `PlugInstall` to install it, followed by `color paper` to enable the
 theme.
@@ -74,6 +66,7 @@ For the text color, highlight color, etc, use:
 
 ## Related projects
 
+- https://gitlab.com/yorickpeterse/vim-paper
 - https://gitlab.com/samue1/paper-theme: support for bashtop, iTerm, Vieb, and
   Vifm
 - https://marketplace.visualstudio.com/items?itemName=18kimn.notebook-theme:
