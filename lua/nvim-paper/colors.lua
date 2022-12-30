@@ -1,7 +1,7 @@
--- Name:         Grey
+-- Name:         Paper
 -- Description:  A low-contrast light theme for NeoVim
 -- Author:       Yorick Peterse <yorick@yorickpeterse.com>
--- Website:      https://gitlab.com/yorickpeterse/nvim-grey
+-- Website:      https://gitlab.com/yorickpeterse
 -- License:      MPL 2.0
 
 local M = {}

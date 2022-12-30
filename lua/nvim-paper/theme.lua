@@ -1,16 +1,18 @@
 -- Name:         Paper
 -- Description:  A low-contrast light theme for NeoVim
 -- Author:       Yorick Peterse <yorick@yorickpeterse.com>
--- Website:      https://gitlab.com/yorickpeterse/vim-paper
+-- Website:      https://gitlab.com/yorickpeterse
 -- License:      MPL 2.0
 
 local M = {}
 
 function M.setup(config)
-  config = config or require('nvim-paper.config')
-  local c = require('nvim-paper.colors')
+  local theme = {}
 
-  local theme
+  config = config or require('nvim-paper.config')
+  theme.colors = require('nvim-paper.colors').config(config)
+  local c = theme.colors
+
   theme.base = {
     -- This highlight group can be used when one wants to disable a highlight
     -- group using `winhl`
@@ -343,8 +345,11 @@ function M.setup(config)
       SignColumn = { bg = c.none },
     })
   end
-
-  theme.base = vim.tbl_extend('force', theme.base, config.highlights or {})
+  theme.base = vim.tbl_extend(
+    'force',
+    theme.base,
+    config.highlights and config.highlights(c) or {}
+  )
   return theme
 end
 
