@@ -1,10 +1,10 @@
-local util = require('nvim-paper.util')
+local utils = require('nvim-paper.utils')
 local theme = require('nvim-paper.theme')
 
 local M = {}
 
 function M.colorscheme()
-  util.load(theme.setup())
+  utils.load(theme.setup())
 end
 
 return M
