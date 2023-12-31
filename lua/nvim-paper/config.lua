@@ -12,7 +12,7 @@ local function opt(key, default)
 end
 
 config = {
-  highlights = opt('highlights', function(_) end),
+  highlights = opt('highlights', {}),
   color_overrides = opt('color_overrides', {}),
   transparent_mode = opt('transparent_mode', false),
 }

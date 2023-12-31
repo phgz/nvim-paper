@@ -345,11 +345,7 @@ function M.setup(config)
       SignColumn = { bg = c.none },
     })
   end
-  theme.base = vim.tbl_extend(
-    'force',
-    theme.base,
-    config.highlights and config.highlights(c) or {}
-  )
+  theme.base = vim.tbl_extend('force', theme.base, config.highlights or {})
   return theme
 end
 
